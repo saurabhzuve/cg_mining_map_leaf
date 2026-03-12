@@ -125,7 +125,7 @@
             transparent: true,
             version: '1.3.0',
             opacity: 0.6
-        }).addTo(map);
+        });
 
         const forestCompartments = L.tileLayer.wms('https://cfr.atree.org/geoserver/cfr/wms', {
             layers: 'cfr:cg_forest_compartments',
@@ -134,7 +134,7 @@
             version: '1.3.0',
             CRS: 'EPSG:4326',
             opacity: 0.6
-        }).addTo(map);
+        });
 
         // Major mining popup
         majorMining.on('click', function(e) {
