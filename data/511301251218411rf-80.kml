@@ -1,0 +1,303 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+  <Document>
+    <name>RF-80.kml</name>
+    <Style id="PolyStyle20">
+      <LabelStyle>
+        <color>00000000</color>
+        <scale>0</scale>
+      </LabelStyle>
+      <LineStyle>
+        <color>ffc500ff</color>
+        <width>1.5</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>00ffffff</color>
+        <fill>0</fill>
+      </PolyStyle>
+    </Style>
+    <StyleMap id="PolyStyle200">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#PolyStyle20</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#PolyStyle201</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="PolyStyle201">
+      <LabelStyle>
+        <color>00000000</color>
+        <scale>0</scale>
+      </LabelStyle>
+      <LineStyle>
+        <color>ffc500ff</color>
+        <width>1.5</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>00ffffff</color>
+        <fill>0</fill>
+      </PolyStyle>
+    </Style>
+    <Folder>
+      <name>RF 80</name>
+      <Placemark id="ID_20023">
+        <name>RF-80</name>
+        <Snippet maxLines="0">
+        </Snippet>
+        <description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+
+<head>
+
+<META http-equiv="Content-Type" content="text/html">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+</head>
+
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+
+<td>RF-80</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+
+<tr>
+
+<td>S.No</td>
+
+<td>24</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>Division</td>
+
+<td>Janjgir-Champa</td>
+
+</tr>
+
+<tr>
+
+<td>Range</td>
+
+<td>Baloda</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>Beat</td>
+
+<td>Budhna</td>
+
+</tr>
+
+<tr>
+
+<td>Compartment No</td>
+
+<td>RF-80</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>Kulrakba In (Ha.)</td>
+
+<td>264.55</td>
+
+</tr>
+
+<tr>
+
+<td>Proposed Area (Ha.)</td>
+
+<td>30</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>Village</td>
+
+<td>Budhna</td>
+
+</tr>
+
+<tr>
+
+<td>Patch_No</td>
+
+<td>P-24</td>
+
+</tr>
+
+</table>
+
+</td>
+
+</tr>
+
+</table>
+
+</body>
+
+</html>]]></description>
+        <styleUrl>#PolyStyle200</styleUrl>
+        <id5>Sucess</id5>
+        <Polygon>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>
+								82.59733250884781,22.23258709937988,0 82.59699584881646,22.23298173544257,0 82.59651935805984,22.23296568650284,0 82.59619312851757,22.23293502900144,0 82.59585639523961,22.23293286987882,0 82.59517584608774,22.23287792355545,0 82.59456556917675,22.23283981598265,0 82.59390944463708,22.23277082420327,0 82.59356407407766,22.23273147073344,0 82.59320600913954,22.23270966324103,0 82.59292250411437,22.2326806849038,0 82.59251475363183,22.23264461365555,0 82.5919121817938,22.23261605750384,0 82.59157661365494,22.23260794416503,0 82.59131214376924,22.23258421382623,0 82.59129744653605,22.23249829356403,0 82.59149624093858,22.2290733107598,0 82.59150551015112,22.22877496890549,0 82.59410283489161,22.22889160378216,0 82.59571875400454,22.22883754300026,0 82.5960288496383,22.22872841259706,0 82.5963446240837,22.22869590582421,0 82.59652938455646,22.2286785303815,0 82.59690396540665,22.22875391706794,0 82.59721401684416,22.22885076394642,0 82.59812622179093,22.22908609435443,0 82.59840097058022,22.22931191290963,0 82.59850309664236,22.22939878841761,0 82.59857431446019,22.22946015392487,0 82.59859048950405,22.22947492627901,0 82.59858039037492,22.22988258765338,0 82.59841420807147,22.23051011493435,0 82.59809482276047,22.23093462290062,0 82.59789083947236,22.23118198491869,0 82.59770517716314,22.23174482769316,0 82.59750359250505,22.2322989845959,0 82.5974201779017,22.23253768237585,0 82.59741915570442,22.23254019151326,0 82.59733250884781,22.23258709937988,0 
+							</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <id>FP/CG/MIN/146694/2021</id>
+        <id1>511301251218411RF-80.kml</id1>
+        <id2>Pno_Inserted</id2>
+      </Placemark>
+      <Placemark id="ID_20010">
+        <name>RF-80</name>
+        <Snippet maxLines="0">
+        </Snippet>
+        <description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+
+<head>
+
+<META http-equiv="Content-Type" content="text/html">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+</head>
+
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+
+<td>RF-80</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+
+<tr>
+
+<td>S.No</td>
+
+<td>11</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>Division</td>
+
+<td>Janjgir-Champa</td>
+
+</tr>
+
+<tr>
+
+<td>Range</td>
+
+<td>Baloda</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>Beat</td>
+
+<td>Budhna</td>
+
+</tr>
+
+<tr>
+
+<td>Compartment No</td>
+
+<td>RF-80</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>Kulrakba In (Ha.)</td>
+
+<td>264.55</td>
+
+</tr>
+
+<tr>
+
+<td>Proposed Area (Ha.)</td>
+
+<td>32</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>Village</td>
+
+<td>Burna</td>
+
+</tr>
+
+<tr>
+
+<td>Patch_No</td>
+
+<td>P-1</td>
+
+</tr>
+
+</table>
+
+</td>
+
+</tr>
+
+</table>
+
+</body>
+
+</html>]]></description>
+        <styleUrl>#PolyStyle200</styleUrl>
+        <id5>Sucess</id5>
+        <Polygon>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>
+								82.59672675518112,22.23390806092286,0 82.59668537623413,22.23414061312349,0 82.59665711129796,22.23429874646785,0 82.59663678012321,22.23440944913883,0 82.5966020550941,22.23459739029774,0 82.59658441664732,22.23469188336349,0 82.59647983901165,22.23525070984012,0 82.59635437573442,22.23591574650685,0 82.59610873578026,22.23719599710792,0 82.59580941026617,22.23874289142767,0 82.59514880712197,22.23857556767277,0 82.59506194206118,22.2385465987904,0 82.59363368352993,22.23816131804189,0 82.59345701378082,22.23811365935159,0 82.59269881686883,22.2379028598485,0 82.59201790908713,22.23772690503578,0 82.59156699799402,22.23760379080564,0 82.59105434919844,22.23753240850915,0 82.59062543340401,22.23748412159979,0 82.5904007305013,22.23744920815648,0 82.59043505949516,22.23727344759364,0 82.59052283172282,22.23688261367985,0 82.5906509573793,22.23635303574492,0 82.59075242666651,22.23585904191787,0 82.59084731400435,22.23542486685995,0 82.59097083228555,22.23486633266038,0 82.59107088492622,22.23434154502977,0 82.59116403529151,22.2339049030601,0 82.59123989820763,22.23342621555599,0 82.5912935548356,22.23298792783858,0 82.59130876546034,22.2326871191684,0 82.59152247130859,22.2326869785476,0 82.59191771947022,22.23270866961085,0 82.5924214981504,22.2327315096973,0 82.59308827306756,22.23278410982019,0 82.59318669455949,22.23279878862438,0 82.59335371931188,22.2328177861295,0 82.59350880906688,22.23283492606907,0 82.59360970038141,22.23284590085428,0 82.59378774562963,22.23286385601451,0 82.59382206439896,22.23286675844087,0 82.59676664403695,22.23367397890917,0 82.59676685732167,22.23367722013004,0 82.59676636488742,22.23368324826567,0 82.59676471050584,22.23369452263642,0 82.59672675518112,22.23390806092286,0 
+							</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <id>FP/CG/MIN/146694/2021</id>
+        <id1>511301251218411RF-80.kml</id1>
+        <id2>Pno_Inserted</id2>
+      </Placemark>
+    </Folder>
+  </Document>
+</kml>

@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+  <Document>
+    <name>Jangir Champa  CA Land Patch No 6 Area 24Ha RF67A.kml</name>
+    <open>1</open>
+    <atom:link rel="app" href="https://www.google.com/earth/about/versions/#earth-pro" title="Google Earth Pro 7.3.6.10201">
+    </atom:link>
+    <Style id="PolyStyle00">
+      <LabelStyle>
+        <color>00000000</color>
+        <scale>0</scale>
+      </LabelStyle>
+      <LineStyle>
+        <color>ffff7000</color>
+        <width>1.5</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>00f0f0f0</color>
+      </PolyStyle>
+    </Style>
+    <Style id="PolyStyle000">
+      <LabelStyle>
+        <color>00000000</color>
+        <scale>0</scale>
+      </LabelStyle>
+      <LineStyle>
+        <color>ffff7000</color>
+        <width>1.5</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>00f0f0f0</color>
+      </PolyStyle>
+    </Style>
+    <StyleMap id="PolyStyle001">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#PolyStyle000</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#PolyStyle00</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Placemark id="ID_00012">
+      <name>Jangir Champa  CA Land Patch No 6 Area 24Ha RF67A</name>
+      <Snippet maxLines="0">
+      </Snippet>
+      <description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+
+<head>
+
+<META http-equiv="Content-Type" content="text/html">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+</head>
+
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+
+<td>RF-67A</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+
+<tr>
+
+<td>Division</td>
+
+<td>Janjgir-Champa</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>Range</td>
+
+<td>Baloda</td>
+
+</tr>
+
+<tr>
+
+<td>Beat</td>
+
+<td>Dongipendri</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>Village</td>
+
+<td>Dongipendri</td>
+
+</tr>
+
+<tr>
+
+<td>Compartmen</td>
+
+<td>RF-67A</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>Kulrakba (Ha.)</td>
+
+<td>191.821</td>
+
+</tr>
+
+<tr>
+
+<td>Proposed Area (Ha.)</td>
+
+<td>24</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>Patch</td>
+
+<td>6</td>
+
+</tr>
+
+</table>
+
+</td>
+
+</tr>
+
+</table>
+
+</body>
+
+</html>]]></description>
+      <styleUrl>#PolyStyle001</styleUrl>
+      <Polygon>
+        <outerBoundaryIs>
+          <LinearRing>
+            <coordinates>
+						82.56927054007366,22.21677566828881,0 82.56912761728071,22.21640305549453,0 82.56845767693311,22.21648068639451,0 82.56765709554753,22.21508379475165,0 82.56732960851274,22.21415565037227,0 82.56515901160417,22.21264696222146,0 82.56528029174883,22.21186690879106,0 82.56514248551663,22.21054912108309,0 82.5648230719214,22.20919784572074,0 82.56796756357599,22.20900452765901,0 82.56819127336338,22.21014716036248,0 82.56861656664788,22.2108643401612,0 82.56933080799179,22.21146009921497,0 82.56897603265544,22.21205138499563,0 82.56897541002797,22.21292890108824,0 82.56936120486631,22.21515959471565,0 82.56961123281636,22.21563874063545,0 82.57009216819971,22.21577609551996,0 82.57020018743232,22.21658730428848,0 82.56927054007366,22.21677566828881,0 
+					</coordinates>
+          </LinearRing>
+        </outerBoundaryIs>
+      </Polygon>
+      <id>
+      </id>
+      <id1>2025_9_15_Sep_2025_185958033_mapgps_JangirChampaCALandPatchNo6Area24HaRF67A.kml</id1>
+      <id2>Pno_Inserted</id2>
+    </Placemark>
+  </Document>
+</kml>

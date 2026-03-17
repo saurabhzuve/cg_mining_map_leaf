@@ -16,6 +16,11 @@
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="https://unpkg.com/leaflet.vectorgrid@1.3.0/dist/Leaflet.VectorGrid.bundled.js"></script>
     <script src="https://unpkg.com/@mapbox/leaflet-omnivore@0.3.4/leaflet-omnivore.min.js"></script>
+    <script src="https://unpkg.com/leaflet-geoserver-request@1.3.1/geoserverRequest.js"></script>
+    <script src="https://unpkg.com/leaflet-search@2.9.7/dist/leaflet-search.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-search@2.9.7/dist/leaflet-search.min.css" />
+
+
 
     <script>
         const map = L.map('map', {
@@ -28,6 +33,7 @@
             maxNativeZoom: 19,
             attribution: 'Esri'
         }).addTo(map);
+
 
         // Major mining leases
         const majorMining = L.vectorGrid.protobuf(
@@ -77,6 +83,30 @@
             }
         ).addTo(map);
 
+        // bhuvan villages
+        const bhuvanVillages = L.vectorGrid.protobuf(
+            "https://indianopenmaps.com/not-so-open/villages/bhuvan/{z}/{x}/{y}.pbf",
+            {
+                maxNativeZoom: 10,
+                maxZoom: 22,
+                rendererFactory: L.svg.tile,
+                vectorTileLayerStyles: {
+                    'bhuvan_villages': {
+                        fillColor: 'yellow',
+                        fill: true,
+                        fillOpacity: 0.3,
+                        stroke: true,
+                        color: 'yellow',
+                        weight: 0.1
+                    }
+                },
+                interactive: true,
+                getFeatureId: function(feature) {
+                    return feature.properties?.id || feature.properties?.village_id || Math.random();
+                }
+            }
+        );
+
         // KML style + layer
         const kmlStyle = {
             color: 'white',
@@ -110,6 +140,39 @@
 
         kmlLayer.addTo(map);
 
+
+        
+
+        const kmlLayerCompWise = omnivore.kml('data\\dep4_segments\\4112212521214727y5compartmentwiseandcomponentwiselandbreakupdep4.kml', null, L.geoJson(null, {
+            style: function () { return kmlStyle; },
+            onEachFeature: function (feature, layer) {
+                const p = feature.properties || {};
+
+                const html = `
+                    <div class="popup-content">
+                        <strong>${p.Facility || 'Dep-04 ML Area'}</strong><br>
+                        New Compartment: ${p.New_compartment_no || 'N/A'}<br>
+                        Old Compartment: ${p.Old_compartment_no || 'N/A'}<br>
+                        Area: ${p.AREA || 'N/A'} <br>
+                        Forest Type: ${p.Forest_Type || 'N/A'}<br>
+                        Division: ${p.Division || 'N/A'}<br>
+                        Range: ${p.Range || 'N/A'}<br>
+                        RF: ${p.RF || 'N/A'},<br>
+                        Village: ${p.Village || 'N/A'},<br>
+                        Khasra: ${p.Khasra_no || 'N/A'}<br>
+                        Land Type: ${p.Land_Type || 'N/A'}<br>
+                    </div>
+                `;
+
+                layer.bindPopup(html);
+            }
+        }));
+
+
+        kmlLayerCompWise.addTo(map);
+
+
+
         // WMS layers
         const cgDistrictsWMS = L.tileLayer.wms('https://cfr.atree.org/geoserver/cfr/wms', {
             layers: 'cfr:cg_district_en',
@@ -126,6 +189,8 @@
             version: '1.3.0',
             opacity: 0.6
         });
+
+
 
         const forestCompartments = L.tileLayer.wms('https://cfr.atree.org/geoserver/cfr/wms', {
             layers: 'cfr:cg_forest_compartments',
@@ -171,15 +236,32 @@
                 .openOn(map);
         });
 
+        // Bhuvan villages popup
+        bhuvanVillages.on('click', function(e) {
+            const props = e.layer?.properties || e.propagatedFrom?.properties || {};
+            L.popup()
+                .setLatLng(e.latlng)
+                .setContent(`
+                    <div class="popup-content">
+                        <strong>${props.v_name || 'Village'}</strong><br>
+                        District: ${props.d_name || 'N/A'}<br>
+                    </div>
+                `)
+                .openOn(map);
+        });
+
+
         // === FIX 1: keep reference to layersControl ===
         const layersControl = L.control.layers(
             { "ESRI Satellite": satellite },
             {
                 "Major Mining (Orange)": majorMining,
                 "Minor Mining (Blue)": minorMining,
-                "Deposit 4": kmlLayer,
+                "Deposit 4 (White)": kmlLayer,
+                "Deposit 4 Compartments": kmlLayerCompWise,
                 "Districts (Black)": cgDistrictsWMS,
                 "Villages (Red)": cgVillagesWMS,
+                "Villages [Bhuvan] (yellow)": bhuvanVillages,
                 "Forest Cmpts (Green)": forestCompartments
             },
             { collapsed: false }

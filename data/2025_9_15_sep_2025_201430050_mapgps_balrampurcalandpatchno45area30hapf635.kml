@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+  <Document>
+    <name>Balrampur CA Land Patch No 45 Area 30Ha PF635.kml</name>
+    <StyleMap id="PolyStyle50">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#PolyStyle500</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#PolyStyle501</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="PolyStyle500">
+      <LabelStyle>
+        <color>00000000</color>
+        <scale>0</scale>
+      </LabelStyle>
+      <LineStyle>
+        <color>ff008d02</color>
+        <width>2</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>00ffffff</color>
+      </PolyStyle>
+    </Style>
+    <Style id="PolyStyle501">
+      <LabelStyle>
+        <color>00000000</color>
+        <scale>0</scale>
+      </LabelStyle>
+      <LineStyle>
+        <color>ff008d02</color>
+        <width>2</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>00ffffff</color>
+      </PolyStyle>
+    </Style>
+    <Placemark id="ID_50004">
+      <name>Balrampur CA Land Patch No 45 Area 30Ha PF635</name>
+      <Snippet maxLines="0">
+      </Snippet>
+      <description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+
+<head>
+
+<META http-equiv="Content-Type" content="text/html">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+</head>
+
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+
+<td>PF 635 30Ha</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+
+<tr>
+
+<td>Sl. No.</td>
+
+<td>5</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>Division</td>
+
+<td>Balrampur</td>
+
+</tr>
+
+<tr>
+
+<td>Range</td>
+
+<td>Raghunath Nagar</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>Beat Name</td>
+
+<td>Raghunath Nagar</td>
+
+</tr>
+
+<tr>
+
+<td>Compartmen</td>
+
+<td>PF 635</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>Proposed Area (Ha.)</td>
+
+<td>30</td>
+
+</tr>
+
+<tr>
+
+<td>Patch No.</td>
+
+<td>45</td>
+
+</tr>
+
+</table>
+
+</td>
+
+</tr>
+
+</table>
+
+</body>
+
+</html>]]></description>
+      <styleUrl>#PolyStyle50</styleUrl>
+      <Polygon>
+        <outerBoundaryIs>
+          <LinearRing>
+            <coordinates>
+						82.86886343426598,23.88156172219585,0 82.87135590835979,23.88361079070093,0 82.87124071971475,23.88406284725172,0 82.87128896259182,23.88476529925638,0 82.87121447933697,23.88531774300147,0 82.87089346140273,23.88632686959226,0 82.87032283973147,23.88680284394473,0 82.86973449777435,23.88754772414111,0 82.86969906415534,23.88867690331713,0 82.86894230371139,23.88960883322283,0 82.8678149130975,23.88993224361792,0 82.86743596642094,23.88943859282323,0 82.8661991997631,23.88992126409264,0 82.86526564901195,23.88978061696445,0 82.86528109106595,23.88950477255726,0 82.86623443567893,23.88867575307223,0 82.86722121640769,23.88809982484327,0 82.86901585029146,23.88633431135739,0 82.86978744911488,23.8851101718687,0 82.87022909003699,23.88445921339735,0 82.8707359999367,23.8837855056389,0 82.87026609093773,23.88347108461474,0 82.86963686841665,23.88391318704005,0 82.86852837779456,23.88405180210057,0 82.86717284366972,23.88427927916106,0 82.86609468211654,23.88456470447187,0 82.86556911207778,23.88471337159165,0 82.86480368574871,23.88365940189343,0 82.86444342824601,23.88300531607944,0 82.86469069902672,23.88243159269976,0 82.86507481132053,23.88195424865871,0 82.86538386683698,23.88186807527902,0 82.86604326195506,23.88221567332831,0 82.866937584757,23.88169510437009,0 82.8670331023902,23.88126681494829,0 82.86743942775882,23.88115486545206,0 82.86770093849,23.88085742881145,0 82.86827361643985,23.88119711453099,0 82.86886343426598,23.88156172219585,0 
+					</coordinates>
+          </LinearRing>
+        </outerBoundaryIs>
+      </Polygon>
+      <atom:link rel="app" href="https://www.google.com/earth/about/versions/#earth-pro" title="Google Earth Pro 7.3.6.10201">
+      </atom:link>
+      <id>
+      </id>
+      <id1>2025_9_15_Sep_2025_201430050_mapgps_BalrampurCALandPatchNo45Area30HaPF635.kml</id1>
+      <id2>Pno_Inserted</id2>
+    </Placemark>
+  </Document>
+</kml>

@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+  <Document>
+    <name>Jangir Champa  CA Land Patch No 19 Area 60Ha OA160.kml</name>
+    <open>1</open>
+    <atom:link rel="app" href="https://www.google.com/earth/about/versions/#earth-pro" title="Google Earth Pro 7.3.6.10201">
+    </atom:link>
+    <StyleMap id="PolyStyle00">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#PolyStyle000</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#PolyStyle001</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="PolyStyle000">
+      <LabelStyle>
+        <color>00000000</color>
+        <scale>0</scale>
+      </LabelStyle>
+      <LineStyle>
+        <color>ffff7000</color>
+        <width>1.5</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>00f0f0f0</color>
+      </PolyStyle>
+    </Style>
+    <Style id="PolyStyle001">
+      <LabelStyle>
+        <color>00000000</color>
+        <scale>0</scale>
+      </LabelStyle>
+      <LineStyle>
+        <color>ffff7000</color>
+        <width>1.5</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>00f0f0f0</color>
+      </PolyStyle>
+    </Style>
+    <Placemark id="ID_00011">
+      <name>Jangir Champa  CA Land Patch No 19 Area 60Ha OA160</name>
+      <Snippet maxLines="0">
+      </Snippet>
+      <description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+
+<head>
+
+<META http-equiv="Content-Type" content="text/html">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+</head>
+
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+
+<td>OA-160</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+
+<tr>
+
+<td>Division</td>
+
+<td>Janjgir-Champa</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>Range</td>
+
+<td>Baloda</td>
+
+</tr>
+
+<tr>
+
+<td>Beat</td>
+
+<td>Amlipali</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>Village</td>
+
+<td>Piparda</td>
+
+</tr>
+
+<tr>
+
+<td>Compartmen</td>
+
+<td>OA-160</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>Kulrakba (Ha.)</td>
+
+<td>155.05</td>
+
+</tr>
+
+<tr>
+
+<td>Proposed Area (Ha.)</td>
+
+<td>60</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>Patch</td>
+
+<td>19</td>
+
+</tr>
+
+</table>
+
+</td>
+
+</tr>
+
+</table>
+
+</body>
+
+</html>]]></description>
+      <styleUrl>#PolyStyle00</styleUrl>
+      <Polygon>
+        <outerBoundaryIs>
+          <LinearRing>
+            <coordinates>
+						82.39798053314276,22.1174481967417,0 82.39820769121012,22.11857171897882,0 82.39736618689531,22.11965579077534,0 82.39752767825914,22.12076776316448,0 82.39825857631669,22.12094106671763,0 82.39797708641981,22.12280842613307,0 82.39638609915313,22.12394526380128,0 82.39611825294162,22.12445615014087,0 82.39403643283757,22.12496690966146,0 82.39351527466835,22.12374799845895,0 82.39335573736157,22.12280532109369,0 82.39360105427619,22.12217744890419,0 82.39257807336963,22.12132865414414,0 82.38860584684296,22.12202483188076,0 82.38791039230422,22.11920013171998,0 82.39196624863385,22.11756608620431,0 82.39703589128507,22.11612375540868,0 82.39798053314276,22.1174481967417,0 
+					</coordinates>
+          </LinearRing>
+        </outerBoundaryIs>
+      </Polygon>
+      <id>
+      </id>
+      <id1>2025_9_15_Sep_2025_192940397_mapgps_JangirChampaCALandPatchNo19Area60HaOA160.kml</id1>
+      <id2>Pno_Inserted</id2>
+    </Placemark>
+  </Document>
+</kml>
