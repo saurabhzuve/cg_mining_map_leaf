@@ -313,7 +313,7 @@
 
         /* Coordinates bar */
         #coords-bar {
-            position: absolute;
+            position: fixed;
             bottom: 24px;
             left: 50%;
             transform: translateX(-50%);
@@ -343,7 +343,7 @@
             background: rgba(239, 227, 195, 0.95);
             border: 1px solid #CFD8B3;
             border-radius: 8px;
-            padding: 10px 14px ;
+            padding: 10px 14px;
             backdrop-filter: blur(6px);
             pointer-events: none;
             opacity: 0.50;
@@ -414,333 +414,408 @@
                 <div class="legend-group-items">
                     <div class="legend-item" id="item-dep4" onclick="toggleLayer('dep4')">
                         <div class="legend-swatch"
-                            style="background:rgba(255,255,255,0.12); border-color:rgba(255,255,255,0.4);"></div>
+                            style="background:rgba(255,255,255,0.12); border-color:rgba(41, 41, 41, 0.685);"></div>
                         <span class="legend-item-label">Dep-04 ML Area</span>
                         <div class="legend-item-extra">
-                            <button class="zoom-btn" onclick="zoomToDep4(event)">⊕ Zoom</button>
+                            <button class="zoom-btn" onclick="zoomToLayer(event, kmlLayer)">⊕ Zoom</button>
                         </div>
                     </div>
                     <div class="legend-item" id="item-dep4c" onclick="toggleLayer('dep4c')">
                         <div class="legend-swatch"
-                            style="background:rgba(255,255,255,0.08); border-color:rgba(255,255,255,0.35);"></div>
+                            style="background:rgb(255, 251, 41); border-color:rgb(255, 251, 41);"></div>
                         <span class="legend-item-label">Compartments</span>
+                        <div class="legend-item-extra">
+                            <button class="zoom-btn" onclick="zoomToLayer(event, kmlLayerCompWise)">⊕ Zoom</button>
+                        </div>
                     </div>
-                </div>
-            </div>
-
-            <div class="legend-divider"></div>
-
-            <!-- Group: Administrative -->
-            <div class="legend-group" id="grp-admin">
-                <div class="legend-group-header" onclick="toggleGroup('grp-admin')">
-                    <span class="group-chevron">▼</span>
-                    <span class="group-label">Administrative</span>
-                </div>
-                <div class="legend-group-items">
-                    <div class="legend-item" id="item-dist" onclick="toggleLayer('dist')">
-                        <div class="legend-swatch line" style="background:#888; width:14px; height:2px;"></div>
-                        <span class="legend-item-label">Districts</span>
-                    </div>
-                    <div class="legend-item inactive" id="item-vil" onclick="toggleLayer('vil')">
-                        <div class="legend-swatch line" style="background:#e55; width:14px; height:2px;"></div>
-                        <span class="legend-item-label">Villages (WMS)</span>
-                    </div>
-                    <div class="legend-item inactive" id="item-bhuvan" onclick="toggleLayer('bhuvan')">
+                    <div class="legend-item" id="item-dep4revfor" onclick="toggleLayer('dep4revfor')">
                         <div class="legend-swatch"
-                            style="background:rgba(255,255,0,0.35); border-color:rgba(255,255,0,0.5);"></div>
-                        <span class="legend-item-label">Villages (Bhuvan)</span>
+                            style="background:rgb(5, 243, 37); border-color:rgba(255,255,255,0.35);"></div>
+                        <span class="legend-item-label">Revenue Forest Land</span>
+                        <div class="legend-item-extra">
+                            <button class="zoom-btn" onclick="zoomToLayer(event, kmlLayerRevForLand)">⊕ Zoom</button>
+                        </div>
+                    </div>
+                    <div class="legend-item" id="item-dep4loadplant" onclick="toggleLayer('dep4loadplant')">
+                        <div class="legend-swatch"
+                            style="background:rgb(255, 106, 156); border-color:rgb(255, 106, 156);"></div>
+                        <span class="legend-item-label">Loading Plant</span>
+                        <div class="legend-item-extra">
+                            <button class="zoom-btn" onclick="zoomToLayer(event, kmlLayerLoadPlant)">⊕ Zoom</button>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="legend-divider"></div>
+                <div class="legend-divider"></div>
 
-            <!-- Group: Forest -->
-            <div class="legend-group" id="grp-forest">
-                <div class="legend-group-header" onclick="toggleGroup('grp-forest')">
-                    <span class="group-chevron">▼</span>
-                    <span class="group-label">Forest</span>
-                </div>
-                <div class="legend-group-items">
-                    <div class="legend-item inactive" id="item-forest" onclick="toggleLayer('forest')">
-                        <div class="legend-swatch line" style="background:#4a9; width:14px; height:2px;"></div>
-                        <span class="legend-item-label">Forest Compartments</span>
+                <!-- Group: Administrative -->
+                <div class="legend-group" id="grp-admin">
+                    <div class="legend-group-header" onclick="toggleGroup('grp-admin')">
+                        <span class="group-chevron">▼</span>
+                        <span class="group-label">Administrative</span>
+                    </div>
+                    <div class="legend-group-items">
+                        <div class="legend-item" id="item-dist" onclick="toggleLayer('dist')">
+                            <div class="legend-swatch line" style="background:#888; width:14px; height:2px;"></div>
+                            <span class="legend-item-label">Districts</span>
+                        </div>
+                        <div class="legend-item inactive" id="item-vil" onclick="toggleLayer('vil')">
+                            <div class="legend-swatch line" style="background:#e55; width:14px; height:2px;"></div>
+                            <span class="legend-item-label">Villages (WMS)</span>
+                        </div>
+                        <div class="legend-item inactive" id="item-bhuvan" onclick="toggleLayer('bhuvan')">
+                            <div class="legend-swatch"
+                                style="background:rgba(255,255,0,0.35); border-color:rgba(255,255,0,0.5);"></div>
+                            <span class="legend-item-label">Villages (Bhuvan)</span>
+                        </div>
                     </div>
                 </div>
-            </div>
 
+                <div class="legend-divider"></div>
+
+                <!-- Group: Forest -->
+                <div class="legend-group" id="grp-forest">
+                    <div class="legend-group-header" onclick="toggleGroup('grp-forest')">
+                        <span class="group-chevron">▼</span>
+                        <span class="group-label">Forest</span>
+                    </div>
+                    <div class="legend-group-items">
+                        <div class="legend-item inactive" id="item-forest" onclick="toggleLayer('forest')">
+                            <div class="legend-swatch line" style="background:#4a9; width:14px; height:2px;"></div>
+                            <span class="legend-item-label">Forest Compartments</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
         </div>
-    </div>
 
-    <!-- Coordinates bar -->
-    <div id="coords-bar">
-        <span id="coords-text">Move cursor over map</span>
-    </div>
+        <!-- Coordinates bar -->
+        <div id="coords-bar">
+            <span id="coords-text">Move cursor over map</span>
+        </div>
 
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-    <script src="https://unpkg.com/leaflet.vectorgrid@1.3.0/dist/Leaflet.VectorGrid.bundled.js"></script>
-    <script src="https://unpkg.com/@mapbox/leaflet-omnivore@0.3.4/leaflet-omnivore.min.js"></script>
-    <script src="https://unpkg.com/leaflet-search@2.9.7/dist/leaflet-search.min.js"></script>
+        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+        <script src="https://unpkg.com/leaflet.vectorgrid@1.3.0/dist/Leaflet.VectorGrid.bundled.js"></script>
+        <script src="https://unpkg.com/@mapbox/leaflet-omnivore@0.3.4/leaflet-omnivore.min.js"></script>
+        <script src="https://unpkg.com/leaflet-search@2.9.7/dist/leaflet-search.min.js"></script>
 
-    <script>
-        const map = L.map('map', { maxZoom: 22, zoomControl: true })
-            .setView([21.25, 81.85], 8);
+        <script>
+            const map = L.map('map', { maxZoom: 22, zoomControl: true })
+                .setView([21.25, 81.85], 8);
 
-        L.control.scale({ imperial: false, position: 'bottomleft' }).addTo(map);
+            L.control.scale({ imperial: false, position: 'bottomleft' }).addTo(map);
 
-        const satellite = L.tileLayer(
-            'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
-            { maxZoom: 22, maxNativeZoom: 19, attribution: '© Esri' }
-        ).addTo(map);
+            const satellite = L.tileLayer(
+                'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
+                { maxZoom: 22, maxNativeZoom: 19, attribution: '© Esri' }
+            ).addTo(map);
 
-        /* ── Popup builder ── */
-        function buildPopup(title, rows) {
-            let trs = rows.map(([k, v]) =>
-                `<tr><td>${k}</td><td>${v || 'N/A'}</td></tr>`
-            ).join('');
-            return `<div class="popup-inner">
+            /* ── Popup builder ── */
+            function buildPopup(title, rows) {
+                let trs = rows.map(([k, v]) =>
+                    `<tr><td>${k}</td><td>${v || 'N/A'}</td></tr>`
+                ).join('');
+                return `<div class="popup-inner">
                 <div class="popup-title">${title}</div>
                 <table>${trs}</table>
             </div>`;
-        }
-
-        /* ── Vector tile style factory ── */
-        function vStyle(fillColor) {
-            return { fillColor, fill: true, fillOpacity: 0.3, stroke: true, color: fillColor, weight: 0.8 };
-        }
-
-        /* ── Major mining ── */
-        const majorMining = L.vectorGrid.protobuf(
-            "https://indianopenmaps.fly.dev/not-so-open/mining/leases/major/ncog/{z}/{x}/{y}.pbf",
-            {
-                maxNativeZoom: 10, maxZoom: 22,
-                rendererFactory: L.svg.tile,
-                vectorTileLayerStyles: {
-                    'NCOG_Major_Mining_Leases': {
-                        fillColor: '#ffa500',
-                        fill: true,
-                        fillOpacity: 0.3,
-                        stroke: true,
-                        color: '#ffa500',
-                        weight: 0.1
-                    }
-                },
-                interactive: true,
-                getFeatureId: f => f.properties?.id || f.properties?.lease_id || Math.random()
             }
-        ).addTo(map);
 
-        majorMining.on('click', e => {
-            const p = e.layer?.properties || e.propagatedFrom?.properties || {};
-            L.popup({ closeButton: true })
-                .setLatLng(e.latlng)
-                .setContent(buildPopup(p.mine_name || p.name || 'Major Mine', [
-                    ['Mine Code', p.mine_code],
-                    ['Lessor', p.name_of_le],
-                    ['Area (Ha)', p.area],
-                    ['Village', p.vil_name11],
-                    ['District', p.district],
-                    ['GID', p.gid]
-                ])).openOn(map);
-        });
-
-        /* ── Minor mining ── */
-        const minorMining = L.vectorGrid.protobuf(
-            "https://indianopenmaps.fly.dev/not-so-open/mining/leases/minor/ncog/{z}/{x}/{y}.pbf",
-            {
-                maxNativeZoom: 10, maxZoom: 22,
-                rendererFactory: L.svg.tile,
-                vectorTileLayerStyles: {
-                    'NCOG_Minor_Mining_Leases': {
-                        fillColor: '#0000ff',
-                        fill: true,
-                        fillOpacity: 0.3,
-                        stroke: true,
-                        color: '#0000ff',
-                        weight: 0.1
-                    }
-                },
-                interactive: true,
-                getFeatureId: f => f.properties?.id || f.properties?.lease_id || Math.random()
+            /* ── Vector tile style factory ── */
+            function vStyle(fillColor) {
+                return { fillColor, fill: true, fillOpacity: 0.3, stroke: true, color: fillColor, weight: 0.8 };
             }
-        ).addTo(map);
 
-        minorMining.on('click', e => {
-            const p = e.layer?.properties || e.propagatedFrom?.properties || {};
-            L.popup({ closeButton: true })
-                .setLatLng(e.latlng)
-                .setContent(buildPopup(p.mine_name || p.name || 'Minor Mine', [
-                    ['Mine Code', p.mine_code],
-                    ['Survey No.', p.survey_no],
-                    ['GID', p.gid]
-                ])).openOn(map);
-        });
+            /* ── Major mining ── */
+            const majorMining = L.vectorGrid.protobuf(
+                "https://indianopenmaps.fly.dev/not-so-open/mining/leases/major/ncog/{z}/{x}/{y}.pbf",
+                {
+                    maxNativeZoom: 10, maxZoom: 22,
+                    rendererFactory: L.svg.tile,
+                    vectorTileLayerStyles: {
+                        'NCOG_Major_Mining_Leases': {
+                            fillColor: '#ffa500',
+                            fill: true,
+                            fillOpacity: 0.3,
+                            stroke: true,
+                            color: '#ffa500',
+                            weight: 0.1
+                        }
+                    },
+                    interactive: true,
+                    getFeatureId: f => f.properties?.id || f.properties?.lease_id || Math.random()
+                }
+            ).addTo(map);
 
-        /* ── Bhuvan villages ── */
-        const bhuvanVillages = L.vectorGrid.protobuf(
-            "https://indianopenmaps.com/not-so-open/villages/bhuvan/{z}/{x}/{y}.pbf",
-            {
-                maxNativeZoom: 10, maxZoom: 22,
-                rendererFactory: L.svg.tile,
-                vectorTileLayerStyles: {
-                    'bhuvan_villages': {
-                        fillColor: 'yellow',
-                        fill: true,
-                        fillOpacity: 0.3,
-                        stroke: true,
-                        color: 'yellow',
-                        weight: 0.1
-                    }
-                },
-                interactive: true,
-                getFeatureId: f => f.properties?.id || f.properties?.village_id || Math.random()
-            }
-        );
+            majorMining.on('click', e => {
+                const p = e.layer?.properties || e.propagatedFrom?.properties || {};
+                L.popup({ closeButton: true })
+                    .setLatLng(e.latlng)
+                    .setContent(buildPopup(p.mine_name || p.name || 'Major Mine', [
+                        ['Mine Code', p.mine_code],
+                        ['Lessor', p.name_of_le],
+                        ['Area (Ha)', p.area],
+                        ['Village', p.vil_name11],
+                        ['District', p.district],
+                        ['GID', p.gid]
+                    ])).openOn(map);
+            });
 
-        bhuvanVillages.on('click', e => {
-            const p = e.layer?.properties || e.propagatedFrom?.properties || {};
-            L.popup({ closeButton: true })
-                .setLatLng(e.latlng)
-                .setContent(buildPopup(p.v_name || 'Village', [
-                    ['District', p.d_name]
-                ])).openOn(map);
-        });
+            /* ── Minor mining ── */
+            const minorMining = L.vectorGrid.protobuf(
+                "https://indianopenmaps.fly.dev/not-so-open/mining/leases/minor/ncog/{z}/{x}/{y}.pbf",
+                {
+                    maxNativeZoom: 10, maxZoom: 22,
+                    rendererFactory: L.svg.tile,
+                    vectorTileLayerStyles: {
+                        'NCOG_Minor_Mining_Leases': {
+                            fillColor: '#0000ff',
+                            fill: true,
+                            fillOpacity: 0.3,
+                            stroke: true,
+                            color: '#0000ff',
+                            weight: 0.1
+                        }
+                    },
+                    interactive: true,
+                    getFeatureId: f => f.properties?.id || f.properties?.lease_id || Math.random()
+                }
+            ).addTo(map);
 
-        /* ── KML layers ── */
-        const kmlStyle = { color: 'rgba(255,255,255,0.7)', weight: 1.5, fillColor: 'white', fillOpacity: 0.05 };
+            minorMining.on('click', e => {
+                const p = e.layer?.properties || e.propagatedFrom?.properties || {};
+                L.popup({ closeButton: true })
+                    .setLatLng(e.latlng)
+                    .setContent(buildPopup(p.mine_name || p.name || 'Minor Mine', [
+                        ['Mine Code', p.mine_code],
+                        ['Survey No.', p.survey_no],
+                        ['GID', p.gid]
+                    ])).openOn(map);
+            });
 
-        function kmlPopup(p, type) {
-            if (type === 'main') {
-                return buildPopup(p.Facility || 'Dep-04 ML Area', [
-                    ['Compartment', p.Compartmen],
-                    ['Old Compartment', p.Old_Compar],
-                    ['Area (ha)', p.Area_1],
-                    ['Forest Type', p.ForestType],
+            /* ── Bhuvan villages ── */
+            const bhuvanVillages = L.vectorGrid.protobuf(
+                "https://indianopenmaps.com/not-so-open/villages/bhuvan/{z}/{x}/{y}.pbf",
+                {
+                    maxNativeZoom: 10, maxZoom: 22,
+                    rendererFactory: L.svg.tile,
+                    vectorTileLayerStyles: {
+                        'bhuvan_villages': {
+                            fillColor: 'yellow',
+                            fill: true,
+                            fillOpacity: 0.3,
+                            stroke: true,
+                            color: 'yellow',
+                            weight: 0.1
+                        }
+                    },
+                    interactive: true,
+                    getFeatureId: f => f.properties?.id || f.properties?.village_id || Math.random()
+                }
+            );
+
+            bhuvanVillages.on('click', e => {
+                const p = e.layer?.properties || e.propagatedFrom?.properties || {};
+                L.popup({ closeButton: true })
+                    .setLatLng(e.latlng)
+                    .setContent(buildPopup(p.v_name || 'Village', [
+                        ['District', p.d_name]
+                    ])).openOn(map);
+            });
+
+            /* ── KML layers ── */
+            const kmlStyle = { color: 'rgba(255,255,255,0.7)', weight: 1.5, fillColor: 'white', fillOpacity: 0.1 };
+
+            function kmlPopup(p, type) {
+                if (type === 'main') {
+                    return buildPopup(p.Facility || 'Dep-04 ML Area', [
+                        ['Compartment', p.Compartmen],
+                        ['Old Compartment', p.Old_Compar],
+                        ['Area (ha)', p.Area_1],
+                        ['Forest Type', p.ForestType],
+                        ['Division', p.Division],
+                        ['Range', p.Range],
+                        ['RF', p.RF]
+                    ]);
+                }
+
+                if (type === 'revfor') {
+                    return buildPopup(p.Land_breakup || 'Dep-04 Revenue Forest Land', [
+                        ['Area (ha)', p.AREA],
+                        ['Village', p.Village],
+                        ['Khasra No.', p.Khasra_No],
+                        ['Land Breakup', p.Land_breakup],
+                        ['Land Type', p.Land_type]
+                    ]);
+                }
+
+                if (type === 'loadplant') {
+                    return buildPopup(p.Facility || 'Dep-04 Loading Plant', [
+                        ['Compartment', p.Compartmen],
+                        ['Old Compartment', p.Old_Compar],
+                        ['Area (ha)', p.AREA],
+                        ['Forest Type', p.ForestType],
+                        ['Division', p.Division],
+                        ['Range', p.Range],
+                        ['RF', p.RF]
+                    ]);
+                }
+
+                return buildPopup(p.Facility || 'Dep-04 Compartment', [
+                    ['New Compartment', p.New_compartment_no],
+                    ['Old Compartment', p.Old_compartment_no],
+                    ['Area', p.AREA],
+                    ['Forest Type', p.Forest_Type],
                     ['Division', p.Division],
                     ['Range', p.Range],
-                    ['RF', p.RF]
+                    ['RF', p.RF],
+                    ['Village', p.Village],
+                    ['Khasra No.', p.Khasra_no],
+                    ['Land Type', p.Land_Type]
                 ]);
             }
-            return buildPopup(p.Facility || 'Dep-04 Compartment', [
-                ['New Compartment', p.New_compartment_no],
-                ['Old Compartment', p.Old_compartment_no],
-                ['Area', p.AREA],
-                ['Forest Type', p.Forest_Type],
-                ['Division', p.Division],
-                ['Range', p.Range],
-                ['RF', p.RF],
-                ['Village', p.Village],
-                ['Khasra No.', p.Khasra_no],
-                ['Land Type', p.Land_Type]
-            ]);
-        }
 
-        const kmlLayer = omnivore.kml('data/Dep4MLArea.kml', null, L.geoJson(null, {
-            style: () => kmlStyle,
-            onEachFeature: (feature, layer) => layer.bindPopup(kmlPopup(feature.properties || {}, 'main'))
-        })).addTo(map);
-
-        const kmlLayerCompWise = omnivore.kml(
-            'data\\dep4_segments\\4112212521214727y5compartmentwiseandcomponentwiselandbreakupdep4.kml',
-            null, L.geoJson(null, {
+            const kmlLayer = omnivore.kml('data/Dep4MLArea.kml', null, L.geoJson(null, {
                 style: () => kmlStyle,
-                onEachFeature: (feature, layer) => layer.bindPopup(kmlPopup(feature.properties || {}, 'comp'))
-            })
-        ).addTo(map);
+                onEachFeature: (feature, layer) => layer.bindPopup(kmlPopup(feature.properties || {}, 'main'))
+            })).addTo(map);
 
-        /* ── WMS layers ── */
-        const cgDistrictsWMS = L.tileLayer.wms('https://cfr.atree.org/geoserver/cfr/wms', {
-            layers: 'cfr:cg_district_en', format: 'image/png',
-            transparent: true, version: '1.3.0', opacity: 0.7
-        }).addTo(map);
+            const kmlLayerCompWise = omnivore.kml(
+                'data\\dep4_segments\\4112212521214727y5compartmentwiseandcomponentwiselandbreakupdep4.kml',
+                null, L.geoJson(null, {
+                    style: () => ({
+                        ...kmlStyle,
+                        fillColor: 'rgb(255, 251, 41)',
+                        color: 'rgb(255, 251, 41)',
+                    }),
+                    onEachFeature: (feature, layer) => layer.bindPopup(kmlPopup(feature.properties || {}, 'comp'))
+                })
+            ).addTo(map);
 
-        const cgVillagesWMS = L.tileLayer.wms('https://cfr.atree.org/geoserver/cfr/wms', {
-            layers: 'cfr:cg_village_en', format: 'image/png',
-            transparent: true, version: '1.3.0', opacity: 0.6
-        });
+            const kmlLayerRevForLand = omnivore.kml(
+                'data\\dep4_segments\\411221252121428v7212dot0952ha_revenueforest_land.kml',
+                null, L.geoJson(null, {
+                    style: () => ({
+                        ...kmlStyle,
+                        fillColor: 'rgb(5, 243, 37)',
+                        color: 'rgb(5, 243, 37)',
+                    }),
+                    onEachFeature: (feature, layer) => layer.bindPopup(kmlPopup(feature.properties || {}, 'revfor'))
+                })
+            ).addTo(map);
 
-        const forestCompartments = L.tileLayer.wms('https://cfr.atree.org/geoserver/cfr/wms', {
-            layers: 'cfr:cg_forest_compartments', format: 'image/png',
-            transparent: true, version: '1.3.0', CRS: 'EPSG:4326', opacity: 0.6
-        });
+            const kmlLayerLoadPlant = omnivore.kml(
+                'data\\dep4_segments\\4112212521214727y510dot239ha_loadingplant.kml',
+                null, L.geoJson(null, {
+                    style: () => ({
+                        ...kmlStyle,
+                        fillColor: 'rgb(255, 106, 156)',
+                        color: 'rgb(255, 106, 156)',
+                    }),
+                    onEachFeature: (feature, layer) => layer.bindPopup(kmlPopup(feature.properties || {}, 'loadplant'))
+                })
+            ).addTo(map);
 
-        /* ── Coordinates bar ── */
-        map.on('mousemove', e => {
-            const lat = e.latlng.lat.toFixed(5);
-            const lng = e.latlng.lng.toFixed(5);
-            document.getElementById('coords-text').textContent = `${lat}°N  ${lng}°E`;
-        });
 
-        /* ── Legend panel toggle ── */
-        const legendHeader = document.getElementById('legend-header');
-        const legendBody = document.getElementById('legend-body');
-        legendHeader.addEventListener('click', () => {
-            const collapsed = legendHeader.classList.toggle('collapsed');
-            legendBody.style.display = collapsed ? 'none' : 'block';
-        });
+            /* ── WMS layers ── */
+            const cgDistrictsWMS = L.tileLayer.wms('https://cfr.atree.org/geoserver/cfr/wms', {
+                layers: 'cfr:cg_district_en', format: 'image/png',
+                transparent: true, version: '1.3.0', opacity: 0.7
+            }).addTo(map);
 
-        /* ── Group collapse ── */
-        function toggleGroup(id) {
-            const grp = document.getElementById(id);
-            const header = grp.querySelector('.legend-group-header');
-            const items = grp.querySelector('.legend-group-items');
-            const collapsed = header.classList.toggle('collapsed');
-            items.style.display = collapsed ? 'none' : 'block';
-        }
-
-        /* ── Layer toggle map ── */
-        const layerMap = {
-            major: majorMining,
-            minor: minorMining,
-            dep4: kmlLayer,
-            dep4c: kmlLayerCompWise,
-            dist: cgDistrictsWMS,
-            vil: cgVillagesWMS,
-            bhuvan: bhuvanVillages,
-            forest: forestCompartments
-        };
-
-        const activeState = {
-            major: true, minor: true, dep4: true, dep4c: true,
-            dist: true, vil: false, bhuvan: false, forest: false
-        };
-
-        function toggleLayer(key) {
-            const layer = layerMap[key];
-            if (!layer) return;
-            const el = document.getElementById('item-' + key);
-            if (activeState[key]) {
-                map.removeLayer(layer);
-                activeState[key] = false;
-                el.classList.add('inactive');
-            } else {
-                map.addLayer(layer);
-                activeState[key] = true;
-                el.classList.remove('inactive');
-            }
-        }
-
-        /* ── Zoom to Deposit 4 ── */
-        function zoomToDep4(e) {
-            e.stopPropagation();
-            const bounds = L.latLngBounds();
-            let extended = false;
-            [kmlLayer, kmlLayerCompWise].forEach(l => {
-                try {
-                    const b = l.getBounds();
-                    if (b && b.isValid()) { bounds.extend(b); extended = true; }
-                } catch (_) { }
+            const cgVillagesWMS = L.tileLayer.wms('https://cfr.atree.org/geoserver/cfr/wms', {
+                layers: 'cfr:cg_village_en', format: 'image/png',
+                transparent: true, version: '1.3.0', opacity: 0.6
             });
-            if (extended) {
-                map.fitBounds(bounds, { padding: [40, 40] });
-            }
-        }
 
-        /* Prevent map clicks on legend */
-        L.DomEvent.disableClickPropagation(document.getElementById('legend'));
-        L.DomEvent.disableScrollPropagation(document.getElementById('legend'));
-        L.DomEvent.disableClickPropagation(document.getElementById('map-title'));
-    </script>
+            const forestCompartments = L.tileLayer.wms('https://cfr.atree.org/geoserver/cfr/wms', {
+                layers: 'cfr:cg_forest_compartments', format: 'image/png',
+                transparent: true, version: '1.3.0', CRS: 'EPSG:4326', opacity: 0.6
+            });
+
+            /* ── Coordinates bar ── */
+            map.on('mousemove', e => {
+                const lat = e.latlng.lat.toFixed(5);
+                const lng = e.latlng.lng.toFixed(5);
+                document.getElementById('coords-text').textContent = `${lat}°N  ${lng}°E`;
+            });
+
+            /* ── Legend panel toggle ── */
+            const legendHeader = document.getElementById('legend-header');
+            const legendBody = document.getElementById('legend-body');
+            legendHeader.addEventListener('click', () => {
+                const collapsed = legendHeader.classList.toggle('collapsed');
+                legendBody.style.display = collapsed ? 'none' : 'block';
+            });
+
+            /* ── Group collapse ── */
+            function toggleGroup(id) {
+                const grp = document.getElementById(id);
+                const header = grp.querySelector('.legend-group-header');
+                const items = grp.querySelector('.legend-group-items');
+                const collapsed = header.classList.toggle('collapsed');
+                items.style.display = collapsed ? 'none' : 'block';
+            }
+
+            /* ── Layer toggle map ── */
+            const layerMap = {
+                major: majorMining,
+                minor: minorMining,
+                dep4: kmlLayer,
+                dep4c: kmlLayerCompWise,
+                dep4revfor: kmlLayerRevForLand,
+                dep4loadplant: kmlLayerLoadPlant,
+                dist: cgDistrictsWMS,
+                vil: cgVillagesWMS,
+                bhuvan: bhuvanVillages,
+                forest: forestCompartments
+            };
+
+            const activeState = {
+                major: true, minor: true, dep4: true, dep4c: true, dep4revfor: true, 
+                dep4loadplant: true,
+                dist: true, vil: false, bhuvan: false, forest: false
+            };
+
+            function toggleLayer(key) {
+                const layer = layerMap[key];
+                if (!layer) return;
+                const el = document.getElementById('item-' + key);
+                if (activeState[key]) {
+                    map.removeLayer(layer);
+                    activeState[key] = false;
+                    el.classList.add('inactive');
+                } else {
+                    map.addLayer(layer);
+                    activeState[key] = true;
+                    el.classList.remove('inactive');
+                }
+            }
+
+            /* ── Zoom to Deposit 4 ── */
+            function zoomToLayer(e, layer) {
+                if (e && e.stopPropagation) {
+                    e.stopPropagation();
+                }
+
+                if (!layer || !layer.getBounds) {
+                    return;
+                }
+
+                const b = layer.getBounds();
+                if (b && b.isValid && b.isValid()) {
+                    map.fitBounds(b, { padding: [40, 40] });
+                }
+            }
+
+
+
+            /* Prevent map clicks on legend */
+            L.DomEvent.disableClickPropagation(document.getElementById('legend'));
+            L.DomEvent.disableScrollPropagation(document.getElementById('legend'));
+            L.DomEvent.disableClickPropagation(document.getElementById('map-title'));
+        </script>
 </body>
 
 </html>
